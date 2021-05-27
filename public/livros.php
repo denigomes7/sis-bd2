@@ -6,6 +6,14 @@
             max-width: 500px;
             margin: auto;
         }
+        .table, th, td{
+            border: 1px solid black;
+            padding: 10px;
+            background-color: white;
+        }
+        .table{
+            border-spacing: 5px;
+        }
     </style>
 </head>
 
