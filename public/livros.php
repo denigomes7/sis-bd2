@@ -25,6 +25,7 @@
         $autor = 'autor';
         $classificacao = 'classificacao';
         $publicacao = 'publicacao';
+        $categoria = 'categoria';
 
         /*TODO-1: Adicione uma variavel para cada coluna */
 
@@ -34,6 +35,7 @@
             '     , ' . $autor .
             '     , ' . $classificacao .
             '     , ' . $publicacao .
+            '     , ' . $categoria .
             /*TODO-2: Adicione cada variavel a consulta abaixo */
             '  FROM livros';
 
@@ -53,6 +55,7 @@
             /* TODO-3: Adicione as variaveis ao cabeçalho da tabela */
             '        <th>' . $classificacao . '</th>' .
             '        <th>' . $publicacao . '</th>' .
+            '        <th>' . $categoria . '</th>' .
             '    </tr>';
 
         echo $cabecalho;
@@ -66,7 +69,8 @@
                     '<td>' . $registro[$autor] . '</td>' .
                     /* TODO-4: Adicione a tabela os novos registros. */
                     '<td>' . $registro[$classificacao] . '</td>' .
-                    '<td>' . $registro[$publicacao] . '</td>';
+                    '<td>' . $registro[$publicacao] . '</td>' .
+                    '<td>' . $registro[$categoria] . '</td>';
                 echo '</tr>';
             }
             echo '</table>';
