@@ -29,6 +29,7 @@
         $editora = 'editora';
         $paginas = 'paginas';
         $idioma = 'idioma';
+        $capa = 'capa';
         
 
         /*TODO-1: Adicione uma variavel para cada coluna */
@@ -43,6 +44,7 @@
             '     , ' . $editora .
             '     , ' . $paginas .
             '     , ' . $idioma .
+            '     , ' . $capa .
 
 
             /*TODO-2: Adicione cada variavel a consulta abaixo */
@@ -57,15 +59,16 @@
         $cabecalho =
             '<table>' .
             '    <tr>' .
+            /* TODO-3: Adicione as variaveis ao cabeçalho da tabela */
             '        <th>' . $titulo . '</th>' .
             '        <th>' . $autor . '</th>' .
-            /* TODO-3: Adicione as variaveis ao cabeçalho da tabela */
             '        <th>' . $classificacao . '</th>' .
             '        <th>' . $publicacao . '</th>' .
             '        <th>' . $categoria . '</th>' .
             '        <th>' . $editora . '</th>' .
             '        <th>' . $paginas . '</th>' .
             '        <th>' . $idioma . '</th>' .
+            '        <th>' . $capa . '</th>' .
             '    </tr>';
 
         echo $cabecalho;
@@ -75,15 +78,16 @@
             while ($registro = mysqli_fetch_assoc($resultado)) {
                 echo '<tr>';
 
+                /* TODO-4: Adicione a tabela os novos registros. */
                 echo '<td>' . $registro[$titulo] . '</td>' .
                     '<td>' . $registro[$autor] . '</td>' .
-                    /* TODO-4: Adicione a tabela os novos registros. */
                     '<td>' . $registro[$classificacao] . '</td>' .
                     '<td>' . $registro[$publicacao] . '</td>' .
                     '<td>' . $registro[$categoria] . '</td>' .
                     '<td>' . $registro[$editora] . '</td>' .
                     '<td>' . $registro[$paginas] . '</td>' .
-                    '<td>' . $registro[$idioma] . '</td>';
+                    '<td>' . $registro[$idioma] . '</td>' .
+                    '<td>' . $registro[$capa] . '</td>';
                 echo '</tr>';
             }
             echo '</table>';
