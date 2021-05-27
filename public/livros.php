@@ -27,6 +27,8 @@
         $publicacao = 'publicacao';
         $categoria = 'categoria';
         $editora = 'editora';
+        $paginas = 'paginas';
+        
 
         /*TODO-1: Adicione uma variavel para cada coluna */
 
@@ -38,6 +40,7 @@
             '     , ' . $publicacao .
             '     , ' . $categoria .
             '     , ' . $editora .
+            '     , ' . $paginas .
 
 
             /*TODO-2: Adicione cada variavel a consulta abaixo */
@@ -59,6 +62,7 @@
             '        <th>' . $publicacao . '</th>' .
             '        <th>' . $categoria . '</th>' .
             '        <th>' . $editora . '</th>' .
+            '        <th>' . $paginas . '</th>' .
             '    </tr>';
 
         echo $cabecalho;
@@ -74,7 +78,8 @@
                     '<td>' . $registro[$classificacao] . '</td>' .
                     '<td>' . $registro[$publicacao] . '</td>' .
                     '<td>' . $registro[$categoria] . '</td>' .
-                    '<td>' . $registro[$editora] . '</td>';
+                    '<td>' . $registro[$editora] . '</td>'.
+                    '<td>' . $registro[$paginas] . '</td>';
                 echo '</tr>';
             }
             echo '</table>';
