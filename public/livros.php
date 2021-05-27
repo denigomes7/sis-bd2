@@ -3,8 +3,14 @@
 <head>
     <style>
         .content {
-            max-width: 500px;
+            max-width: 700px;
             margin: auto;
+        }
+        body {
+            background-color: purple;
+        }
+        h1, h2 {
+            color: white;
         }
         .table, th, td{
             border: 1px solid black;
@@ -21,9 +27,11 @@
 
 <body>
     <div class="content">
+
         <h1>Bibliófilo's</h1>
 
         <h2>Livros</h2>
+
         <?php
         require 'mysql_server.php';
 
